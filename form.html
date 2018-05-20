@@ -1,0 +1,37 @@
+<html>
+<body>
+
+
+<h1>Rate Customer Service Web Form</h1>
+
+<form action = "form_handling.php" method = "post">
+<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+Name: <input type = "name" name = "name">
+<span class = "error">* <?php echo $nameError; ?></span>
+<br><br>
+
+E-mail: <input type = "email" name = "email">
+<span class = "error">* <?php echo $emailError; ?></span>
+<br><br>
+
+How Was Your Service Today? <br>
+<textarea name = "comment" rows = "10" cols = "40"></textarea><br><br>
+<span class = "error">* <?php echo $commentError;?></span>
+
+Rate Your Service: <br>
+<input type = "radio" name = "rate" value = "0">0
+<input type = "radio" name = "rate" value = "1">1
+<input type = "radio" name = "rate" value = "2">2
+<input type = "radio" name = "rate" value = "3">3
+<span class = "error">* <? php echo $rateError; ?> </span>
+<br>
+<input type = "submit">
+
+</form>
+</body>
+</html>
+
+<?php
+
+
+?>
